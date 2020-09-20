@@ -1,0 +1,230 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-size: 16px;
+	font-family: sans-serif;
+}
+.contenedor{
+	width: 90vw;
+	height: 100vh;
+	max-width: 1400px;
+	margin: auto;
+}
+.cabezera{
+	width: 100%;
+	margin-bottom: 20px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cabezera__titulo{
+	font-size: 50px;
+}
+.cabezera__info-follows{
+	font-size: 25px;
+	color: #929292;
+}
+.dark-mode__btn{
+	position: relative;
+	border-radius: 30px;
+	border: none;
+	width: 60px;
+	height: 25px;
+	background:#888484;
+}
+.dark-mode__switch{
+	content: '';
+	width: 40%;
+	height: 100%;
+	background: linear-gradient(to left,#00e7ff,#14ff00);
+	border-radius: 100%;
+	position: absolute;
+	left: calc(100% - 40%);
+	top: 0;
+	transition: all ease 1s;
+}
+.dark-mode__switch--active{
+	left: 0;
+}
+
+
+
+.big-cards{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+	grid-auto-rows: minmax(250px,1fr);
+	gap:30px;
+}
+
+.Bcard{
+	background: #f1f1f1;
+	border-radius: 5px;
+	border-top: 5px solid  #2c63f5;
+
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+	align-items: center;
+}
+.Bcard__red-social{
+	display: flex;
+}
+.Bcard__red-social-icon{
+	font-size: 20px;
+	color: #3b6dff;
+	margin-right: 5px;
+}
+.Bcard__red-social-name {
+	font-size: 18px;
+}
+.Bcard__info-follows{
+	text-align: center;
+}
+.Bcard__info-num{
+	font-size: 60px;
+	font-weight: 700;
+}
+.Bcard__info-texto{
+	display: block;
+	letter-spacing: 3px;
+	font-weight: 700;
+	color:  #b8b6b6;
+}
+
+.Bcard__estado{
+	color: #35d650;
+	font-size: 18px;
+}
+.Bcard__estado-icon{
+	font-size: 16px;
+}
+
+.titulo-section2{
+	margin-top: 30px;
+	width: 100%;
+	font-size: 30px;
+	color: #757d7d;
+}
+
+.medium-cards{
+	margin-top: 20px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+	grid-auto-rows: minmax(50px,1fr);
+	gap:30px;
+}
+
+.Mcard{
+	background: #f1f1f1;
+	padding: 10px;
+}
+.Mcard-superior,
+.Mcard-abajo{
+	padding: 10px;
+}
+.Mcard__vistas{font-size: 18px;}
+
+.Mcard__icon{
+	float: right;
+	font-size: 20px;
+	color: #3b6dff;
+	width: 20px;
+}
+.Mcard__num{
+	font-size: 30px;
+	font-weight: 700;
+}
+.Mcard__estado{
+	color: #35d650;
+	float: right;
+	font-weight: 700;
+	font-size: 14px;
+	margin-top: 15px;
+}
+.Mcard__estado-icon{
+	margin-right: 5px;
+}
+/*Cards Segun la Red social*/
+.Bcard--twitter{
+	border-color: #489cfb;
+}
+.Bcard__red-social-icon--twitter{
+	color: #489cfb;
+}
+.Bcard--insta{
+   border: none;
+   position: relative;
+}
+.Bcard--insta::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   border-radius: 5px 5px 0px 0px;
+   width: 100%;
+   height: 5px;
+   background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+
+}
+.Bcard__red-social-icon--insta{
+	width: 20px;
+	margin-right: 5px;
+}
+.Bcard--YT{
+	border-color: #f42b1e;
+}
+.Bcard__red-social-icon--YT,
+.Bcard__estado--YT,
+.Mcard__estado--red{
+	color: #f42b1e;
+}
+.Bcard__icon-insta{
+	width: 20px;
+}
+
+.Mcard .fa-twitter{
+	color:  #489cfb;
+}
+.Mcard .fa-youtube{
+	color:  #f42b1e;
+}
+
+
+
+/*Modo Obscuro*/
+.cabezera__titulo-dark{
+	color:  white;
+}
+.Bcard-dark,
+.Mcard-dark{
+	background: #162053;
+}
+.Bcard__red-social-name-dark{
+	color: #929292;
+}
+.Bcard__info-num-dark{
+	color: white;
+}
+.Mcard__vistas-dark,
+.Mcard__num-dark{
+	color: white;	
+}
+
+@media screen and (max-width: 750px) {
+	.dark-mode{
+		padding: 20px 0; 
+	}
+	.cabezera{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+}
